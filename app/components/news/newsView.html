@@ -1,0 +1,21 @@
+    <main clearfix  >
+    <div class="wrap">
+    <div class="container">
+		
+				<ul class="event-list"  >
+					<li ng-repeat='item in items'>
+						<time>
+							<span class="day">{{item.day}}</span>
+							<span class="month">{{item.month}}</span>
+						</time>
+						<span class="img" ng-style="{'background-image':'url({{item.photoUrl}})'}"    ></span>
+						<div class="info">
+							<h2 class="title">{{item.title}}</h2>
+							<p class="desc">{{item.description}}</p>
+							<div class="arrow"><i class="fa fa-chevron-right  fa-4x " aria-hidden="true"></i></div>
+						</div>
+					</li>
+				</ul>
+	</div>
+	</div>
+			</main>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="theatreSite">
+<head>
+	<meta charset="UTF-8">
+  <meta content="user-scalable=false; initial-scale=1.0; maximum-scale=1.0" name="viewport">
+  <meta name="format-detection" content="telephone=no">
+	<title>Document</title>
+  <script src="assets/lib/angularJS/angular.min.js"></script>
+  <script src="assets/lib/angularJS/ngStorage.min.js"></script>
+  <script src="assets/lib/angularJS/angular-route.min.js"></script>
+  <script src="assets/lib/angularJS/angular-sanitize.min.js"></script>
+  <script src="assets/lib/jquery/jquery-3.1.1.min.js"></script>
+ <!--  <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="assets/lib/angularJS/ng-map.min.js"></script> -->
+
+  <link rel="stylesheet" href="assets/lib/FontAwesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+
+<script src="app/app.js"></script>
+
+<script src="app/shared/header/headerDirective.js"></script>
+<script src="app/components/main/mainController.js"></script>
+<script src="app/components/producer/producerController.js"></script>
+<script src="app/components/troupe/troupeController.js"></script>
+<script src="app/components/photos/controllers/photosController.js"></script>
+<script src="app/components/contacts/contactsController.js"></script>
+<script src="app/components/photos/controllers/photosItemController.js"></script>
+<script src="app/components/news/newsController.js"></script>
+
+<script src="app/shared/footer/footerDirective.js"></script>
+<script src="app/shared/backgroundSlides/backgroundSlidesDirective.js"></script>
+<div ng-controller="navController">
+<ul class="body_slides" >
+<li></li>
+<li></li>
+<li></li>
+</ul>
+<div ng-class="getClass('/troupe')"></div>
+<div ng-class="getClass('/photos')"></div>
+</div>
+<div backgroundSlides></div>
+<div header></div>
+<ng-view class="clearfix"></ng-view>
+<!-- <div footer></div> -->
+
+  <!-- <footer>
+    sdfsdf
+  </footer> -->
+
+<script>
+theatreSite.controller('navController',
+  ['$scope','$http', '$location', function($scope,$http,$location,$path) {
+  $scope.getClass = function (path) {
+    if ($location.path().substr(0, path.length) === path) {
+      return 'popUpDialog-bg';
+    } 
+  }
+  }]);
+
+// var myVar;
+
+// function myFunction() {
+//     myVar = setTimeout(showPage, 1000);
+// }
+
+// function showPage() {
+//   document.getElementById("loader").style.display = "none";
+//   document.getElementById("myDiv").style.display = "block";
+// }
+
+</script>	
+</body>
+</html>

@@ -1,0 +1,21 @@
+<main clearfix  >
+    <div class="wrap">
+    	
+    	<div class="troupeImage" ng-repeat='item in troupe' ng-click="showDetails = ! showDetails">
+        <div class="mainImg">
+    		<img ng-src="{{item.photoUrl}}"  alt="Картинка" />
+        </div>
+    		<div class="caption">{{item.name}}
+    		</div>
+    		<div class="bgmask"><i class="fa fa-plus-circle  fa-4x " aria-hidden="true"></i></div>
+            <div id="myModal" ng-show="showDetails" class="modal">
+            <!-- <span class="close">×</span> -->
+            <div class="modal-content" >
+                <img ng-src="{{item.photoUrl}}"  alt="Картинка" />
+                </div>
+            </div>
+		</div>
+			
+    </div>    
+</main>
+

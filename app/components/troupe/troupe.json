@@ -1,0 +1,36 @@
+{
+  "troupe": [
+    {
+      "name":"Мария Топчило",
+      "photoUrl":"assets/img/troupe/маша.jpg"
+    },
+    {
+      "name":"Андрей Гуменный",
+      "photoUrl":"assets/img/troupe/гуменный.jpg"
+    },
+    {
+      "name":"Юлия Сулина",
+      "photoUrl":"assets/img/troupe/сулина.jpg"
+    },
+    {
+      "name":"Александр Стариковский",
+      "photoUrl":"assets/img/troupe/стариковский.jpg"
+    },
+    {
+      "name":"Юля Подорожная",
+      "photoUrl":"assets/img/troupe/подорожная.jpg"
+    },
+    {
+      "name":"Катя Якимец",
+      "photoUrl":"assets/img/troupe/якимец.jpg"
+    },
+    {
+      "name":"Настя Гальцева",
+      "photoUrl":"assets/img/troupe/гальцева.jpg"
+    },
+    {
+      "name":"Дима Крестьянников",
+      "photoUrl":"assets/img/troupe/дима.png"
+    }
+  ]
+}

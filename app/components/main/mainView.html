@@ -1,0 +1,35 @@
+<main clearfix>
+    <div class="wrap">
+      <div class="top-info" ng-repeat='poster in posters' >
+        <div class="mainImg" ng-click="showDetails = ! showDetails">
+        <img ng-src="{{poster.photoUrl}}"  alt="" >
+         </img>
+          <div id="myModal" ng-show="showDetails" class="modal">
+            <!-- <span class="close">×</span> -->
+            <div class="modal-content" >
+                <img ng-src="{{poster.photoUrl}}"  alt="Картинка" />
+            </div>
+        </div>     
+         </div>
+        <div class="date">
+			<span class="day">{{poster.day}}</span>
+			<span class="month">{{poster.month}}</span>
+            <span class="time">{{poster.time}}</span> 
+		</div>
+        <div class="main-content">
+        <h3>{{poster.title}}</h3>
+      
+        <p>{{poster.description|limitTo: 280}}...
+        </p></div>
+
+
+        <div class="contact-info"><img src="assets/img/location.png" alt="">{{poster.address}}</div>
+        <div class="contact-info phone"><img src="assets/img/phone.png" alt="">{{poster.phone}}</div>
+        <div class="btn-holder">
+        <a href="http://vernadskychallenge.com/ru#" target="_blank" class="btn">Купить билет</a></div>
+          
+        
+      </div>
+        
+    </div>    
+</main>
